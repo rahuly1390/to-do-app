@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { ToDoComponent } from './to-do/to-do.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { TodoService } from './to-do/to-do.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToDoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
